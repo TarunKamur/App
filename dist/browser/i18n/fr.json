@@ -1,0 +1,14 @@
+{ 
+    "forgetPage":{      
+         "hello":"hello"
+     } ,
+     "signin":{
+ 
+     },
+     "signup":{
+ 
+     },
+     "footer":{
+        "connect_with_us":"Connect with us"
+     }
+ }

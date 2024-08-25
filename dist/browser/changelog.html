@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <base href="/">
+    <title>Changelog</title>
+    <meta charset="utf-8">
+   <link rel="icon" type="image/x-icon" href="https://d2ivesio5kogrp.cloudfront.net/static/gotv/images/gotv-favicon.png" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <script type="text/javascript" src="http://dd5fjho32kkoi.cloudfront.net/staticstorage/yuppflix_files/jQuery.min.js?v=0.31"></script>
+   
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>   
+    body {
+        background-color: #333;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;     
+    } 
+    .total-list{
+        margin-top: 50px;
+    }
+    .itemised{
+        margin-bottom: 30px;
+    }
+    .item-date{
+        text-decoration: underline;
+        font-weight: 600;
+    }
+    .item-details{
+        margin-left: 20px;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+</style>
+
+
+</head>
+
+<body> 
+
+    <div class="container" id="log-container"> </div>
+
+    <script>
+    
+        function DetectAndServe() {
+            let chagneData = [
+                {
+                    "date" : "5-june",
+                        "changeset" : [
+                            "lazy pagination --- YOP-11655",
+                            "image lazy loading -- YOP-11655",
+                            " TV guide separate module -- YOP-11689",
+                        ]
+                },
+            {
+                "date":"30-june",
+                    "changeset":[
+                    "YOP-11529 SLT- Sign Up works without matching passwords.",
+                    "YOP-11463 [Firstshows-Mobile Web] -- Observed Continue button is not displayed properly in Language selection page",
+                    "YOP-11363 [SLT-Web] -- Observe 'An OTP will be sent to your mobile for verification' text is displayed on the mobile update page when the system feature key is false" ,
+                    "[Mobitel-web]-Observed Search result getting overlap on suggestions in search page https://yupptv.atlassian.net/browse/YOP-11294",
+                    "[fusion] Details page background video preview https://yupptv.atlassian.net/browse/YOP-11425",
+                    "[Aastha beta]- Observed that text Overlap in the recommendations section in player page https://yupptv.atlassian.net/browse/YOP-11598",
+                    "[Aastha beta] - Support Module Routing Url changes. https://yupptv.atlassian.net/browse/YOP-11599",
+                    "settings separate module"
+                    ],  
+                } ,  
+            {
+                "date":"06-june-2022",
+                    "changeset":[                  
+                    "YOP-11326  Clicking on Start Over from Movie/Web Series details page is resuming the stream",
+                    "YOP-11354 SLT live Mobile browser TV Guide issues",
+                    "YOP-11495 [Reeldrama]-Error 404 pages",           
+                    ],  
+                } ,  
+                 {
+                "date":"23-may",
+                    "changeset":[
+                        "web app not loading in some times -- YOP-11423"                  
+                    ],  
+                } , 
+                {
+                "date":"12-may",
+                    "changeset":[
+                        "CardChanges-Large cards,overLay cards added.",                       
+                        "[YOP-11425] [fusion]Details page background video preview",
+                        "social login set password flow",
+                        "seo improvments",
+                        "search auto focus not working in firfox so removed",    
+                        "sign in / signup / forget password pages as a new modules YOP-11450" ,
+                        "web app not loading in some times YOP-11423"  ,                 
+                    ],  
+                } ,   
+                {
+                    "date":"5-may",
+                    "changeset":[                        
+                        "new change log added",
+                    ]
+                } 
+                       
+            ]
+            let Text= '<div class="total-list"> ';
+                for( let i=0;i<chagneData.length;i++){
+                    Text +=   '<div class="itemised">'
+                        Text += '<div class="item-date">'
+                        Text +=    chagneData[i].date
+                        Text += '</div>'
+                        Text += '<div class="item-list">'
+                            for(let j=0; j< chagneData[i].changeset.length;j++){
+                                Text += '<div class="item-details">'
+                                Text +=     chagneData[i].changeset[j]
+                                Text += '</div>'                               
+                            }
+                        Text += '</div>'
+                    Text += '</div>'   
+                }
+            Text += '</div>'
+            document.getElementById("log-container").innerHTML=Text;
+        };
+    
+        DetectAndServe();
+    
+    </script>
+</body>
+
+</html>

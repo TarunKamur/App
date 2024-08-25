@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" lang="en" prefix="og:http://ogp.me/ns#" itemscope="" itemtype="http://schema.org/WebPage">
+
+<head>
+	<title>Watcho</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+	<link rel="icon" type="image/x-icon" href="https://d2ivesio5kogrp.cloudfront.net/static/watcho/images/watcho-favicon.png" />
+		
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+		
+		<style>
+			*{ margin:0; padding:0;}
+			body{ background:#141414; font-family: "Poppins", sans-serif;}
+			.template-fluid .faq_container{min-height: 500px;}
+			.faq_container .header h1{font-size: 22px;}
+
+			@media screen and (max-width: 1200px){
+				.template-fluid .faq_container{width: 100%;}
+				.template-fluid .faq_container{min-height: 300px;}
+			}
+			/* @media screen and (max-width: 768px){
+				.template-fluid .faq_container ul .tabList{padding: 12px 15px;margin-bottom: 15px;}
+				.template-fluid .faq_container ul li button{font-size: 14px;}
+				.template-fluid .faq_container ul .tabList:after{top: 20px;}
+				.template-fluid .faq_container .accordian-head .accordionTitle{font-size: 14px;padding: 12px 15px;}
+				.template-fluid .faq_container .accordian-head .accordionContent{font-size: 12px;padding: 12px 15px 6px;}
+				.template-fluid .faq_container .accordian-head .accordionTitle::after{top: 15px;}
+				.template-fluid .faq_container .accordian-head.is-open .accordionTitle::after{top: 19px;}
+				.template-fluid .faq_container .accordian-head{margin-bottom: 15px;}
+			} */
+
+			/* mobile html css */
+			.faq_container{ width:1200px; margin:30px auto;}
+			.faq_container .tabcontent h1{color: #f5f5f5;font-size: 24px;}
+			.faq_container .header{position: relative;margin-bottom: 25px;}
+			.faq_container .header h1{color:#f5f5f5; font-weight:500;padding-left: 30px;}
+			.faq_container ul{ padding:0; margin:0;}
+			.faq_container ul .tabList{ padding:15px 20px; background:#2d2d2d; border-radius:4px;
+				margin-bottom:20px; list-style:none; position:relative; transition:all 0.3s;cursor: pointer;
+			}
+			.faq_container .header .back{position: absolute;top: 0;cursor: pointer;}
+			/* .faq_container ul li:hover{ background:#333;} */
+			.faq_container ul li button{background: #2d2d2d;border: none;color: #fff;font-size: 16px; text-align:left;}
+			.faq_container ul .tabList:after{border: solid #ccc; border-width: 0 2px 2px 0; display: inline-block; padding: 4px;
+				transform: rotate(-45deg); -webkit-transform: rotate(-45deg); content:"";
+				position:absolute; right:25px; top:22px;
+			}
+			
+			.faq_container .accordian-head{margin-bottom: 20px;position: relative;list-style: none;}
+			.faq_container .accordian-head .accordionTitle::after{border: solid #ccc; border-width: 0 2px 2px 0; display: inline-block; padding: 4px;
+				transform: rotate(45deg); -webkit-transform: rotate(45deg); content:"";
+				position:absolute; right:25px; top:20px;transition: .2s ease-in-out;
+			}
+			.faq_container .accordian-head.is-open .accordionTitle::after{transform: rotate(-135deg); -webkit-transform: rotate(-135deg);transition: .2s ease-in-out;top: 24px;}
+			.faq_container .accordian-head .accordionTitle{color:#fff; font-size:16px; text-decoration:none;
+				display:block; padding-right:50px; background:none; border:none; text-decoration:none; cursor:pointer;padding: 15px 15px;background: #2d2d2d;border-radius: 4px;}
+			.faq_container .accordian-head .accordionContent{background: #201e1e;color: #fff;padding: 16px 20px 8px;font-size: 14px;border-radius: 3px;display: none;opacity: 0.85;}
+			.faq_container .accordian-head .accordionContent p{margin-bottom: 8px;}
+			.faq_container .accordian-head.is-open .accordionContent{display: block;}
+			.faq_container .accordian-head .accordionContent ul,.faq_container .accordian-head .accordionContent ol{padding-left: 40px;margin-bottom: 8px;}
+			.faq_container .accordian-head .accordionContent ol li{list-style: decimal;}
+			.faq_container .accordian-head .accordionContent ul li{list-style: disc;}
+			.faq_container .accordian-head .accordionContent .bullet{list-style: disc;}
+			.faq_container .accordian-head .accordionContent .link{text-decoration: none;color: #04a5e8;}
+
+			.tabcontent { color: #000; display: none; padding: 10px 20px; }
+			#defaultOpen{ display:block;}
+			/* .accordionTitle {cursor: pointer;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none} */
+			@media screen and (max-width: 768px){
+				.faq_container{width: 100%;}
+				.faq_container .header h1,.faq_container .tabcontent h1{font-size: 20px;}
+				.faq_container .header .back{top: 2px}
+				.faq_container ul .tabList{padding: 10px 30px 10px 15px;margin-bottom: 15px;}
+				.faq_container ul li button{font-size: 14px;}
+				.faq_container ul .tabList:after{top: 17px;}
+				.faq_container ul .tabList:after{right: 15px;}
+				.faq_container .accordian-head .accordionTitle{font-size: 14px;padding: 10px 30px 10px 15px}
+				.faq_container .accordian-head .accordionContent{font-size: 12px;padding: 12px 15px 6px;}
+				.faq_container .accordian-head .accordionTitle::after{top: 13px;right: 15px;}
+				.faq_container .accordian-head.is-open .accordionTitle::after{top: 18px;}
+				.faq_container .accordian-head{margin-bottom: 15px;}
+				.faq_container .accordian-head .accordionContent ul, .faq_container .accordian-head .accordionContent ol{padding-left: 30px;}
+			}
+			@media screen and (max-width : 480px){
+				.faq_container .tabcontent{padding: 10px 15px;}
+				.faq_container .header{margin-bottom: 20px;}
+				.faq_container .header h1{font-size: 18px;}
+				.faq_container .header .back{top: 3px;height: 20px;}
+				.faq_container .accordian-head .accordionContent ul, .faq_container .accordian-head .accordionContent ol{padding-left: 20px;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="faq_container template">
+		
+			<div class="tabcontent" id="defaultOpen">
+				<h1>FAQ</h1>
+				<ul>
+					<li class="tabList" onclick="openPage('0')">
+						<button>Watcho Plans- General</button>
+					</li>
+					<li class="tabList" onclick="openPage('1')">
+						<button >Watcho Plans- Registration and Login</button>
+					</li>
+					<li class="tabList" onclick="openPage('2')">
+						<button >Watcho Plans- Usage</button>
+					</li>
+					<li class="tabList" onclick="openPage('3')">
+						<button >Watcho Plans- Content</button>
+					</li>
+					<li class="tabList" onclick="openPage('4')">
+						<button >Watcho Plans- Subscription, Pricing & Payments</button>
+					</li>
+					<li class="tabList" onclick="openPage('5')">
+						<button >Watcho Offers- Buy 1 , Get 1</button>
+					</li>
+					<li class="tabList" onclick="openPage('6')">
+						<button >Watcho Plans- Refunds & Cancellations</button>
+					</li>
+					<li class="tabList" onclick="openPage('7')">
+						<button >Watcho Plans- Streaming</button>
+					</li>
+					<li class="tabList" onclick="openPage('8')">
+						<button >About Watcho</button>
+					</li>
+					<li class="tabList" onclick="openPage('9')">
+						<button >Watcho Premium</button>
+					</li>
+					<li class="tabList" onclick="openPage('1010')">
+						<button >Managing Your Account</button>
+					</li>
+					<li class="tabList" onclick="openPage('1111')">
+						<button >Service Usage Issues</button>
+					</li>					
+					<li onclick="accordion(this.id)" id='getintouch'class="accordian-head is-open">
+						<a class="accordionTitle" >Get In Touch!</a>
+						<div class="accordionContent">
+							<p>If you have any feedback for us or are facing any issues, please login to the application and raise a support ticket under the Help section for immediate response or write to us at <a href="mailto:hello@watcho.com" class="link">hello@watcho.com</a>.</p><br>
+							<p style="font-weight: 600;">For content on Watcho:</p>
+							<p>You can submit your content (readily available / concepts) to <a href="mailto:content@dishd2h.com" class="link">content@dishd2h.com</a></p><br>
+							<p><i style="font-weight: 600;">For advertising on Watcho, please contact:</i></p>
+							<p><span style="font-weight: 600;">North & East -</span> <a href="mailto:ashima.mehra@india.com" class="link">ashima.mehra@india.com</a></p>
+							<p><span style="font-weight: 600;">West & South -</span> <a href="mailto:khushboo.gupta@zeemedia.esselgroup.com" class="link">khushboo.gupta@zeemedia.esselgroup.com</a></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="0" class="tabcontent">
+				
+				<div class="header">
+					<h1>Watcho Plans- General</h1>
+					<img class="back" alt="back" onclick="back()" src="https://d2ivesio5kogrp.cloudfront.net/static/watcho/images/arrow-back-home.png">
+				</div>
+				<ul>
+					<li onclick="accordion(this.id)" id='00'class="accordian-head">
+						<a class="accordionTitle" >What are Watcho Plans?</a>
+						<div class="accordionContent">
+							<p>Watcho Plans is a subscription feature available within Watcho App that provides the user premium content/OTT platforms at one place with the choice to opt any of 4 subscription pack variations and pay a single price through a single sign in process.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='01'class="accordian-head">
+						<a class="accordionTitle" >What is the difference between Watcho Exclusives and Watcho Plans?</a>
+						<div class="accordionContent">
+							<p>Watcho Exclusives is an OTT platform that hosts LIVE TV channels, originals, short format content, movies and SWAG - A user community platform,</p>
+							<p>Watcho Plans is a subscription feature within Watcho whereby you can subscribe to multiple OTT platforms in a single pack and with a single payment.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='02'class="accordian-head">
+						<a class="accordionTitle" >What are the benefits for me with Watcho Plans?</a>
+						<div class="accordionContent">
+							<p>Benefits and features are -</p>
+							<ul>
+								<li>All-in-one subscription: Get subscription of 10+ Entertainment OTT Apps in a single pack with single login and on device of your choice.</li>
+								<li>One-stop Destination: Live TV channels, Movies, TV Shows, web series,short format content from multiple Apps.</li>
+								<li>Varied Apps Landscape: Multiple premium OTT apps – Watcho,ZEE5, SonyLIV, Hotstar ,Lionsgate Play, Hoichoi, Hungama Play, Oho Gujarati , and many more in pipeline.</li>
+							</ul>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='03'class="accordian-head">
+						<a class="accordionTitle" >How can I become a customer of Watcho Plan(s)?</a>
+						<div class="accordionContent">
+							<p><u>Non-Watcho User</u> : Please download the Watcho App through the Google Play Store , App Store or visit <a href="https://www.watcho.com/" target="_blank" class="link">www.watcho.com</a>. Once App is downloaded, purchase any subscription plan of your choice available under the ‘Watcho Plans & Offers’ page by registering and signing up with your 10 digit mobile to enjoy rich library of third party OTT contents. The registration and sign in process on website is the same as in the App.</p><br>
+							<p><u>Existing Watcho User</u>: If you are an already a Watcho user, login to App with your registered mobile number and purchase any subscription plan of your choice available under the ‘Watcho Plans & Offers’ page to enjoy rich library of third party OTT contents.</p><br>
+							<p><u>Existing Dish/D2h DTH subscribers</u>:  If you are an existing Dish/d2H DTH  customers, download Watcho App or visit www.watcho.com and login or register with your registered mobile number, purchase any subscription plan of your choice available under the ‘Watcho Plans & Offers’ page to enjoy rich library of third party OTT contents.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="1" class="tabcontent">
+				<div class="header">
+					<h1>Watcho Plans- Registration and Login</h1>
+					<img class="back" alt="back" onclick="back()" src="https://d2ivesio5kogrp.cloudfront.net/static/watcho/images/arrow-back-home.png">
+				</div>
+				<ul>
+					<li onclick="accordion(this.id)" id='10'class="accordian-head">
+						<a class="accordionTitle" >Do I have to be a Dish/D2H customer to take any Watcho Plan(s) subscription?</a>
+						<div class="accordionContent">
+							<p>Non-existing Dish/d2H customers can either download Watcho App or go to <a href="https://www.watcho.com/" target="_blank" class="link">www.watcho.com</a>. You will be able to see plans under “Watcho plans and offers”, you can choose the plan of your liking and make payment to enjoy endless content with your 10 digit mobile number.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='11'class="accordian-head">
+						<a class="accordionTitle" >Can I Take Watcho plan(s) subscription from all devices?</a>
+						<div class="accordionContent">
+							<p>Currently a user can take Watcho plan(s) subscription from <a href="https://www.watcho.com/" target="_blank" class="link">www.watcho.com</a> and Android Mobil App. iOS Mobile users can browse Watcho plan(s) on Watcho iOS App and make payment on <a href="https://www.watcho.com/" target="_blank" class="link">www.watcho.com</a> for selected pack.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='12'class="accordian-head">
+						<a class="accordionTitle" >I did not receive OTP. What should I do?</a>
+						<div class="accordionContent">
+							<p>Sometimes there can be a delay in receiving the OTP due to network issues with SMS service provider. Tap on 'Resend OTP' if you don't receive it after a minute. Please try later if the issue continues.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='13'class="accordian-head">
+						<a class="accordionTitle" >Can I change my registered mobile number?</a>
+						<div class="accordionContent">
+							<p>Currently, this feature is not available.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='14'class="accordian-head">
+						<a class="accordionTitle" >Can I use the same mobile number for more than one Watcho Plan(s) subscription at the same time?</a>
+						<div class="accordionContent">
+							<p>Sorry, the same mobile number cannot be used for more than 1 subscription. You will need to register and log in to Watcho App with a different mobile number for another subscription.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div id="2" class="tabcontent">
+				<div class="header">
+					<h1>Watcho Plans- Usage</h1>
+					<img class="back" alt="back" onclick="back()" src="https://d2ivesio5kogrp.cloudfront.net/static/watcho/images/arrow-back-home.png">
+				</div>
+				<ul>
+					<li onclick="accordion(this.id)" id='20'class="accordian-head">
+						<a class="accordionTitle" >Is the content geo-restricted? Can I watch the content if I am based out of another country?</a>
+						<div class="accordionContent">
+							<p>All Watcho content is currently available for users residing only in India. For other partner Apps of the subscribed Watcho pack, please refer to content partners’ terms and conditions.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='21'class="accordian-head">
+						<a class="accordionTitle" >Can I watch content on multiple devices simultaneously?</a>
+						<div class="accordionContent">
+							<p>You can watch content on all Apps on 2 devices simultaneously based on the availability of the partner App on the device chosen by you. For Hungama, you can watch content up to 5 devices. Zee5 is available on 1 screen. In case any content is still not accessible on the platform you are trying or If you get playback / device concurrency error, kindly stop playing content on any one of the device.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='22'class="accordian-head">
+						<a class="accordionTitle" >I am an Watcho Plan Subscriber but unable to watch content on partner App, what should I do?</a>
+						<div class="accordionContent">
+							<p>Please perform below steps</p>
+							<ol>
+								<li class="points">Check your internet connection.</li>
+								<li class="points">Refresh the page by going back to the previous screen and then try to login again.</li>
+								<li class="points">Close the Watcho app and relaunch the app again.</li>
+								<li class="points">Logout and login again.</li>
+								<li class="points">Clear mobile cache </li>
+							</ol>
+							<span>For Android: Go to 'Settings > Apps > Watcho > Storage > Select Clear Cache'.</span>
+							<p>For iOS: Go to 'Settings > General > iPhone Storage > Watcho. Select 'Clear' and then 'Offload App'.  </p>
+							<ol>
+								<li class="points">Check for app updates on Play/App Store. Relaunch app after update.  </li>
+								<li class="points">Click on the App icon again listed with your subscribed pack.</li>
+							</ol>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='23'class="accordian-head">
+						<a class="accordionTitle" >Do I have to install any additional apps to access partner App content with Watcho pack(s)?</a>
+						<div class="accordionContent">
+							<ul>
+								<li>In order to watch content powered by partners, you can either install the partner apps available in your subscription plan or access content on partner websites in web browser, however we are working to make all content available on Watcho App soon.</li>
+								<li>You can watch the Watcho Exclusives content within the same App without the need to install additional app.</li>
+							</ul>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='24'class="accordian-head">
+						<a class="accordionTitle" >What is the process to use partner app content?</a>
+						<div class="accordionContent">
+							<ul>
+								<li>If you do not have the partner apps installed, you can either install the partner apps available in your subscription plan or access content on partner websites on web browser.</li>
+								<li>In case of App installation for the first time, you will need to launch the partner App from Watcho by clicking on the App icon listed under Watcho subscribed plan.</li>
+								<li>From next time onwards, you need not login to partner Apps via Watcho, You can open partner Apps directly without any prompt for login and access content.</li>
+							</ul>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='25'class="accordian-head">
+						<a class="accordionTitle" >When I am trying to watch Hotstar content, I am asked to subscribe again. What should I do?</a>
+						<div class="accordionContent">
+							<p>Before accessing any Disney + Hotstar content with Watcho Subscription</p>
+							<ol>
+								<li>Please install the Hotstar App on your device.</li>
+								<li>Login to the Hotstar App / website with the mobile number used for Watcho pack subscription.</li>
+							</ol>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='26'class="accordian-head">
+						<a class="accordionTitle" >When I am trying to watch SonyLIV content , I am asked to subscribe again. What should I do?</a>
+						<div class="accordionContent">
+							<p>Before accessing any SonyLIV content with Watcho Subscription</p>
+							<ol>
+								<li>Please install the SonLIV App on your device.</li>
+								<li>Launch SonyLIV App by clicking on the SonyLIV icon displayed with your subscribed Watcho pack. It will automatically login to SonyLIV and you will be able to access all content.</li>
+							</ol>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div id="3" class="tabcontent">
+				<div class="header">
+					<h1>Watcho Plans- Content</h1>
+					<img class="back" alt="back" onclick="back()" src="https://d2ivesio5kogrp.cloudfront.net/static/watcho/images/arrow-back-home.png">
+				</div>
+				<ul>
+					<li onclick="accordion(this.id)" id='30'class="accordian-head">
+						<a class="accordionTitle" >What content is available for free users and subscribed users?</a>
+						<div class="accordionContent">
+							<ul>
+								<li>Free/Registered users can watch only Free to air channels, Watcho Originals first episodes and free partner App contents as per partner policy.</li>
+								<li>Subscribed users with any Watcho packs will get access to watch all premium contents of Watcho and partner Apps as per chosen Watcho subscription plan(s).</li>
+							</ul>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='31'class="accordian-head">
+						<a class="accordionTitle" >Do I get all content that is available on partner apps?</a>
+						<div class="accordionContent">
+							<p>You will be able to enjoy all subscription based content available on these apps. However, there may be some exceptions as providers manage the availability of titles that are included with their service. Content inclusions can be checked by visiting their pages.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='32'class="accordian-head">
+						<a class="accordionTitle" >Can I search content for its availability of partner Apps on Watcho App?</a>
+						<div class="accordionContent">
+							<p>Currently, you can access content on partner App(s), wherein search feature is available.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="4" class="tabcontent">
+				<div class="header">
+					<h1>Watcho Plans- Subscription, Pricing & Payments</h1>
+					<img class="back" alt="back" onclick="back()" src="https://d2ivesio5kogrp.cloudfront.net/static/watcho/images/arrow-back-home.png">
+				</div>
+				<ul>
+					<li onclick="accordion(this.id)" id='40'class="accordian-head">
+						<a class="accordionTitle" >How much Watcho does plans subscription cost?</a>
+						<div class="accordionContent">
+							<p>There are 4 subscription plans available to users to choose from, depending on individual taste, You can visit Watcho plans and offers on website <a href="https://www.watcho.com/" target="_blank" class="link">www.watcho.com</a> or on Watcho App to choose plans.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='41'class="accordian-head">
+						<a class="accordionTitle" >Are the prices inclusive of taxes?</a>
+						<div class="accordionContent">
+							<p>Yes, the listed prices are inclusive of taxes.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='42'class="accordian-head">
+						<a class="accordionTitle" >I want to change or upgrade my current Watcho Plan.</a>
+						<div class="accordionContent">
+							<p>You can put the request to change plan during the current Watcho Plan validity by paying the new plan subscription charges, however, new plan will be effective from next billing cycle. You can continue to enjoy the existing plan as is till last date of the validity. Alternatively, in case you need an instant update, you can purchase your new Watcho subscription pack by paying the pack price. Your old pack validity, any offers and subscription charges will not be carried forward.</p>
+							<p>Alternatively, You can register on Watcho with a different mobile number and use this new number to login to the content partners’ App to watch your favourite content.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='43'class="accordian-head">
+						<a class="accordionTitle" >What happens to my previous existing Subscription of any partner App that is available in my Watcho pack?</a>
+						<div class="accordionContent">
+							<p>The existing subscription of content Apps will continue in parallel.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='44'class="accordian-head">
+						<a class="accordionTitle" >How can I view all transactions for my account?</a>
+						<div class="accordionContent">
+							<p>You can watch your transactions from “Payment History” tab available under burger menu on top left on the home page.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='45'class="accordian-head">
+						<a class="accordionTitle" >What are the modes of payment available?</a>
+						<div class="accordionContent">
+							<p>Online payments mechanisms are accepted on Watcho App and Website</p>
+							<ul>
+								<li>Dish/d2h wallet for existing Dish/d2h DTH subscribers- Subscribers to maintain sufficient balance in DTH wallet before buying subscription</li>
+								<li>Online Payments through trusted banking partners and payment gateways</li>
+								<li>It is recommended to opt for auto renewal requests through our trusted payment service providers for ease and continuity of services.</li>
+								<li>You can visit the nearest Dish/D2h dealer to buy or recharge Watcho plans subscriptions.</li>
+							</ul>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='46'class="accordian-head">
+						<a class="accordionTitle" >Can I take subscription from any offline mode; ie. From any shop in market?</a>
+						<div class="accordionContent">
+							<p>You can purchase subscription vouchers or recharge your Watcho subscription from any of the Dish/d2h DTH retail outlets and redeem voucher with the process defined or ask the dealer to help you through the activation process.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='47'class="accordian-head">
+						<a class="accordionTitle" >How do I renew my subscription? Is it auto-renewed?</a>
+						<div class="accordionContent">
+							<p>Yes, the subscription will be auto renewed if auto renewal if opted at the time of Subscription.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='48'class="accordian-head">
+						<a class="accordionTitle" >How do I opt out of auto-renewal?</a>
+						<div class="accordionContent">
+							<p>To opt out of auto-renewal, deactivate the subscription at any point of time by logging in to Watcho App or website, www.watcho.com and click on “cancel” tab shown below subscribed pack, you will not be renewed from next billing cycle and you will be able to use subscription for your current full validity period.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='49'class="accordian-head">
+						<a class="accordionTitle" >Do I need to keep my linear DTH subscription active in order to avail any Watcho pack?</a>
+						<div class="accordionContent">
+							<p>You can take independent Watcho subscription plan and start your OTT journey by subscribing to any Watcho pack from Watcho Android App or Website.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="5" class="tabcontent">
+				<div class="header">
+					<h1>Watcho Offers- Buy 1 , Get 1</h1>
+					<img class="back" alt="back" onclick="back()" src="https://d2ivesio5kogrp.cloudfront.net/static/watcho/images/arrow-back-home.png">
+				</div>
+				<ul>
+					<li onclick="accordion(this.id)" id='50'class="accordian-head">
+						<a class="accordionTitle" >Which Plans are applicable under this offer?</a>
+						<div class="accordionContent">
+							<p>Watcho Masti, Dhamaal and Watcho Max.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='51'class="accordian-head">
+						<a class="accordionTitle" >Do I need to be a Dish, d2h customer to avail the offer?</a>
+						<div class="accordionContent">
+							<p>No, You can take either of the plans Watcho Masti or Watcho Dhamaal to avail Buy 1 get 1. Watcho Max is available only to Dish,d2h and SITI customers.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='52'class="accordian-head">
+						<a class="accordionTitle" >I have already taken Watcho Mirchi, Can I take higher plans under this offer?</a>
+						<div class="accordionContent">
+							<p>Yes, You can take either of 3 higher plans listed on App/website. You can choose to take it immediately or pay and start after the expiry of current plan while you continue to enjoy current Mirchi Pack. If you choose to take it immediately, your previous pack charges, validity and any offer will be forfeited.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='53'class="accordian-head">
+						<a class="accordionTitle" >I have already taken Watcho Masti under Buy 1 Get 1 offer, Can I take higher plans under this offer again?</a>
+						<div class="accordionContent">
+							<p>No, This offer is one time only for any pack that you choose.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='54'class="accordian-head">
+						<a class="accordionTitle" >I have subscribed to Buy1, get 1 offer but unable to see 2 months validity on content partner Apps like Zee5, SonyLIV, Hotstar, Hoichoi etc?</a>
+						<div class="accordionContent">
+							<p>Your subscription on partner Apps will be extended on the 30th day of first month and will be auto extended for another 30 days. Do not worry, Subscription will work for 60 days. Happy streaming!!!</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='55'class="accordian-head">
+						<a class="accordionTitle" >I have subscribed to this offer but my Watcho plan was not renewed after 30 days.</a>
+						<div class="accordionContent">
+							<p>
+								If your subscribed pack was any of Masti, Max or Dhamaal and is not renewed after 30 days, Please raise a ticket on Watcho App or website and our care team will resolve the issue at earliest.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='56'class="accordian-head">
+						<a class="accordionTitle" >I purchased Watcho Mirchi but did not get Buy 1, Get 1 offer.</a>
+						<div class="accordionContent">
+							<p>Buy1, Get 1 offer is not valid for Watcho Mirchi.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='57'class="accordian-head">
+						<a class="accordionTitle" >I clicked on the banner with Watcho Max banner promoting Rs.253 pack but unable to subscribe to it under Buy 1, Get 1.</a>
+						<div class="accordionContent">
+							<p>Watcho Max plan is available for subscription to Dish, d2h and SITI cable and broadband customers. If you are not a subscriber of any of the above platforms, MAX pack unfortunately is not eligible.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="6" class="tabcontent">
+				<div class="header">
+					<h1>Watcho Plans- Refunds & Cancellations</h1>
+					<img class="back" alt="back" onclick="back()" src="https://d2ivesio5kogrp.cloudfront.net/static/watcho/images/arrow-back-home.png">
+				</div>
+				<ul>
+					<li onclick="accordion(this.id)" id='60'class="accordian-head">
+						<a class="accordionTitle" >How can I cancel my subscription?</a>
+						<div class="accordionContent">
+							<p>You can choose to cancel subscription at any point of time by logging in Watcho App and see the “cancel” tab under subscribed plan in Watcho plans and offers page, It will cancel auto-renewal, your existing subscription will be cancelled only after end of active validity period.</p>
+							<p>In case your plan is not on auto renewal, subscribed pack will automatically expire at the end of current validity.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='61'class="accordian-head">
+						<a class="accordionTitle" >What are the refund policies?</a>
+						<div class="accordionContent">
+							<p>Once you have subscribed to a Watcho plan, there is no refund for the subscription price. Your current subscription is valid till the end of the current billing cycle. On cancelling the subscription, it will not get auto-renewed.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='62'class="accordian-head">
+						<a class="accordionTitle" >What are the supported devices where I can use Watcho and partner Apps in Subscription?</a>
+						<div class="accordionContent">
+							<p>The device supported for accessing Watcho App are</p>
+							<ul>
+								<li>PC/Laptop</li>
+								<li>Android Mobile & Tablets</li>
+								<li>IOS Mobile & Tablets</li>
+							</ul>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='63'class="accordian-head">
+						<a class="accordionTitle" >How can I use Watcho and partner Apps on my preferred device?</a>
+						<div class="accordionContent">
+							<ul>
+								<li>Go to app store of your device and search for Watcho/ Name of partner App</li>
+								<li>Download and install the App</li>
+								<li>Login with your Watcho registered mobile number and OTP</li>
+								<li>Start enjoying the content on Watcho/ partner App</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="7" class="tabcontent">
+				<div class="header">
+					<h1>Watcho Plans- Streaming</h1>
+					<img class="back" alt="back" onclick="back()" src="https://d2ivesio5kogrp.cloudfront.net/static/watcho/images/arrow-back-home.png">
+				</div>
+				<ul>
+					<li onclick="accordion(this.id)" id='70'class="accordian-head">
+						<a class="accordionTitle" >What is the minimum required internet speed to watch content?</a>
+						<div class="accordionContent">
+							<p>There is no minimum speed required, but you will have a better-quality streaming experience if your speed is more than 2Mbps.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='71'class="accordian-head">
+						<a class="accordionTitle" >Can I cast videos from Watcho and partner app to my Smart TV?</a>
+						<div class="accordionContent">
+							<p>Yes, Watcho Exclusives supports casting, to know about casting for Partner App, please visit partner T&C.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='72'class="accordian-head">
+						<a class="accordionTitle" >I am unable to stream the content, the video is constantly buffering.</a>
+						<div class="accordionContent">
+							<p>You can check the internet connection, streaming works seamlessly if connected on Wi-Fi ,In case of Mobile Data, please ensure that you are connected to 3G/4G network. You can clear App cache and restart the device, If the problem still persists, you may reach out to us via web and App form. Our team will check and resolve the concern at earliest.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="8" class="tabcontent">
+				<div class="header">
+					<h1>About Watcho</h1>
+					<img class="back" alt="back" onclick="back()" src="https://d2ivesio5kogrp.cloudfront.net/static/watcho/images/arrow-back-home.png">
+				</div>
+				<ul>
+					<li onclick="accordion(this.id)" id='80'class="accordian-head">
+						<a class="accordionTitle" >What do I get with Watcho?</a>
+						<div class="accordionContent">
+							<p>Enjoy unlimited streaming of new-age content; from original series, short films, celebrity collaborations to infotainment videos. You can register for FREE with your mobile number, email ID, Social login, and use additional features such as Add to Watchlist, Follow, Share, etc. You can also upload your own videos on Swag and build a fan following on the app.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='81'class="accordian-head">
+						<a class="accordionTitle" >How to get Watcho?</a>
+						<div class="accordionContent">
+							<p>You can get Watcho by:</p>
+							<ol>
+								<li>Downloading Watcho App from Google Playstore or App Store</li>
+								<li>Watcho Website is available on <a href="https://www.watcho.com/" class="link">www.watcho.com</a>.</li>
+								<li>Watcho App is available on Android TV, Fire Stick, Samsung Smart TV, CloudWalker as well.</li>
+							</ol>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='82'class="accordian-head">
+						<a class="accordionTitle" >Is the streaming free?</a>
+						<div class="accordionContent">
+							<p>We have a wide catalog of content available free of cost on the platform. However to watch Exclusive Original content you need to subscribe to the premium subscription on the platform.</p><br>
+							<p>All the DishTV/d2h subscribers get a 1-month free subscription from the account creation date.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='83'class="accordian-head">
+						<a class="accordionTitle" >What content do you have?</a>
+						<div class="accordionContent">
+							<ul>
+								<li>Live TV channels</li>
+								<li>Original Web Series.</li>
+								<li>Digital Influencer Shows- Fashion, Lifestyle, Comedy</li>
+								<li>Regional films & dramas</li>
+								<li>Inspiring & Captivating Real Stories from India</li>
+								<li>Create your own user profile with a customized Playlist</li>
+								<li>Watcho Swag - Creator Videos</li>
+							</ul>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='84'class="accordian-head">
+						<a class="accordionTitle" >Do I have to pay to watch content?</a>
+						<div class="accordionContent">
+							<p>The Watcho application provides free access to DishTV & d2h subscribers for 6 months. Post that the subscription can be purchased.</p><br>
+							<p>For non-DishTV & d2h subscribers, the premium subscription needs to be purchased to view the Original Exclusive content. The access includes all the video-on-demand content such as web series, short films, movies, spotlight series.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='85'class="accordian-head">
+						<a class="accordionTitle" >How many Live Channels do you have? Can I watch all my LiveTV channels that I see on DishTV/D2H set-top-box on Watcho?</a>
+						<div class="accordionContent">
+							<p>Watcho is still very young and we are working to add more and more channels on Watcho for you to watch. LiveTV channels are only available to DishTV and d2h customers. Also, not all Live TV Channels are available as of now. Select channels are available for you to watch based on your set-top-box pack. To view Live TV, you need to login through your DishTV/d2h RMN (registered mobile number). Also, you can visit the Live TV page on the app to see the list of channels and programs available to watch.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='86'class="accordian-head">
+						<a class="accordionTitle" >Can I watch catchup content?</a>
+						<div class="accordionContent">
+							<p>Yes, we have select catch-up programs for you to watch. The catch-up content for paid Live channels is available only to Dish/d2h Subscribers basis their entitlement on the STB.</p>
+							<p>We are adding more channels and programs for you to watch. Stay tuned to Watcho to know more.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='87'class="accordian-head">
+						<a class="accordionTitle" >Can I watch videos offline?</a>
+						<div class="accordionContent">
+							<p>Download and view offline feature is available on the application. You can download and watch any video on the go at your convenience.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='88'class="accordian-head">
+						<a class="accordionTitle" >How do I know what Content I have to pay for?</a>
+						<div class="accordionContent">
+							<p>You can see the paid content marked with 'Premium' tag on the thumbnail.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='89'class="accordian-head">
+						<a class="accordionTitle" >I am an existing dittoTV member. Can I log in to Watcho app or website under the same account?</a>
+						<div class="accordionContent">
+							<p>No, Watcho is a completely separate app and there is no link to DittoTV. You will have to register a new account or login with your DishTV / d2h account on Watcho. </p><br>
+							<p>You can easily register for a new account  on Watcho to get started and watch the catalogue of content.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='810'class="accordian-head">
+						<a class="accordionTitle" >Can I save a list of movies and shows to watch later?</a>
+						<div class="accordionContent">
+							<p>Yes, you can add content to watch-list from the video or the series page. For adding to watchlist, you have to login first. You can access all the content added to watch-list from the 'My Watchlist' section in the Menu under 'More' tab.</p>
+							<p>You can also follow series and other people to get relevant updates when new videos are added to that series or by that creator.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='811'class="accordian-head">
+						<a class="accordionTitle" >I am not able to play any content. Need help!</a>
+						<div class="accordionContent">
+							<p>If you are not able to play any content, check the following:</p>
+							<ol>
+								<li>Is your internet connection working at a good speed</li>
+								<li>Log out and close the app. Then, reopen the app and log in to your account.</li>
+								<li>Uninstall the app and reinstall it.</li>
+							</ol>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='812'class="accordian-head">
+						<a class="accordionTitle" >Can I change the video quality?</a>
+						<div class="accordionContent">
+							<p>While we offer adaptive quality setting that sets the most suitable quality of the video based on your network speed, you can also change the setting manually from the video player or from Settings menu under the 'More' tab.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='813'class="accordian-head">
+						<a class="accordionTitle" >Can I watch Watcho on my Smart TV?</a>
+						<div class="accordionContent">
+							<p>You can watch the video on Watcho from the below-listed platforms - </p>
+							<ul>
+								<li>Android Smart TV</li>
+								<li>Samsung Smart TV</li>
+								<li>Fire Stick</li>
+								<li>Google Chromecast</li>
+								<li>Cloud Walker</li>
+							</ul>
+							<p>We plan to support more smart TV apps in near future. Stay tuned to Watcho for updates.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="9" class="tabcontent">
+				<div class="header">
+					<h1>Watcho Premium</h1>
+					<img class="back" alt="back" onclick="back()" src="https://d2ivesio5kogrp.cloudfront.net/static/watcho/images/arrow-back-home.png">
+				</div>
+				<ul>
+					<li onclick="accordion(this.id)" id='90'class="accordian-head">
+						<a class="accordionTitle" >What is Watcho Premium?</a>
+						<div class="accordionContent">
+							<p>Watcho Premium is a membership service for our committed customers in which we offer access to our premium catalog of titles in web series, short films, movies, spotlight series, and more. This membership is available for a fee. </p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='91'class="accordian-head">
+						<a class="accordionTitle" >What videos are available in the premium catalogue?</a>
+						<div class="accordionContent">
+							<p>Our premium videos and series are marked with a Premium tag on the image for you to easily identify which content is paid and which is free.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='92'class="accordian-head">
+						<a class="accordionTitle" >Is this service available outside India?</a>
+						<div class="accordionContent">
+							<p>This service is only available in India for now.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='93'class="accordian-head">
+						<a class="accordionTitle" >How can I get access to the Watcho Introductory Access Program?</a>
+						<div class="accordionContent">
+							<p>The Watcho Introductory offer is now only available for DishTV / d2h subscribers. You can Register/Login through your DishTV/d2h registered mobile number. Once you log-in, you will be enrolled as a member with access to all the premium content.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="1010" class="tabcontent">
+				<div class="header">
+					<h1>Managing Your Account</h1>
+					<img class="back" alt="back" onclick="back()" src="https://d2ivesio5kogrp.cloudfront.net/static/watcho/images/arrow-back-home.png">
+				</div>
+				<ul>
+					<li onclick="accordion(this.id)" id='100'class="accordian-head">
+						<a class="accordionTitle" >How do I access my Account?</a>
+						<div class="accordionContent">
+							<p>You need to login in the app from the menu under 'More' tab. You can then access your profile, your application settings and other features such as watch-list, following, video uploads, etc.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='101'class="accordian-head">
+						<a class="accordionTitle" >I have forgotten my password. How can I change/recover it?</a>
+						<div class="accordionContent">
+							<p>If you have forgotten your password, please click on the Forgot Password link on the sign-in page, and submit your mobile number or your email address. A password reset link will be sent to your registered id to change your password.</p>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='102'class="accordian-head">
+						<a class="accordionTitle" >I already have an account on Watcho. Why am I unable to sign in with the same?</a>
+						<div class="accordionContent">
+							<ol>
+								<li>You May Be Entering An Incorrect Password.</li>
+								<li>You May Have Made A Typo In Your Email Address When You Signed Up.</li>
+							</ol>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="1111" class="tabcontent">
+				<div class="header">
+					<h1>Service Usage Issues</h1>
+					<img class="back" alt="back" onclick="back()" src="https://d2ivesio5kogrp.cloudfront.net/static/watcho/images/arrow-back-home.png">
+				</div>
+				<ul>
+					<li onclick="accordion(this.id)" id='110'class="accordian-head">
+						<a class="accordionTitle" >Video is playing really slow/I am facing video playback issues. What do I do?</a>
+						<div class="accordionContent">
+							<p>If you are facing video playback issues:</p>
+							<ol>
+								<li>Check if your network connection is active and running with a good speed.</li>
+								<li>Check if you are getting any error message:
+									<ul>
+										<li>If you are not able to play premium content, check if you are logged-in</li>
+										<li>Check if you are getting any concurrent streaming message. As a security mechanism, sometimes we do not allow content play if there are many devices using the same account. You can see the list of devices using your account from 'Device Management' under the Settings menu in the 'More' tab.</li>
+										<li>If you are not able to play Live TV programs, check if you are logged in with your DishTV/d2h registered mobile number and have access to the same channel on your set-top-box. You can only watch those Live TV channels which you can watch on your set-top-box and are available on Watcho.</li>
+										<li>Check if you have any VPN or a proxy-controller installed in the browser. Content is protected through a DRM and does not play through a VPN.</li>
+									</ul>
+								</li>
+								<li>If the video is still not playing, please restart the app and try again.</li>
+							</ol>
+						</div>
+					</li>
+					<li onclick="accordion(this.id)" id='111'class="accordian-head">
+						<a class="accordionTitle" >Why am I getting an error saying content not available in my region?</a>
+						<div class="accordionContent">
+							<p>Geographical restrictions apply to streaming content outside India. Currently, all our content is available only to watch in India.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<script>
+			function openPage(pageName) {
+				var url = new URL(window.location.href);
+				url.searchParams.append('item', pageName)
+				window.location.href = url.href;				
+			}
+				valParam = location.search;
+				if(valParam){
+					item = new URLSearchParams(valParam).get('item');
+					theme = new URLSearchParams(valParam).get('theme');
+					deviceid = new URLSearchParams(valParam).get('deviceid');
+					lang = new URLSearchParams(valParam).get('lang');
+					if(item){
+						document.getElementById('defaultOpen').style.display = "none";
+						document.getElementById(item).style.display = "block";
+					}					
+				}
+			function accordion(id){
+				// const  a = document.querySelector('.is-open');
+				// myFunction(id)
+				if(document.getElementById(id).classList.contains('is-open')){				
+					document.getElementById(id).classList.remove('is-open');
+				}
+				else{
+					document.getElementById(id).classList.add('is-open')				
+				}
+			}
+			// function myFunction(e) {
+			// 	var elems = document.querySelector(".is-open");
+			// 	if(elems !==null){
+			// 		elems.classList.remove("is-open");
+			// 	}
+			// }
+			function back(){
+				window.history.back();
+			}
+		</script>
+	</body>
+</html>

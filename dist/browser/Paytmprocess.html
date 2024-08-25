@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <style>
+        * {margin: 0;padding: 0;}
+        body{margin: 0;padding: 0;background: #141414;}
+        .text{height: 100%;color: #fff;position: fixed;top: 60px;display: flex;align-items: center;justify-content: center;width: 100%;}
+        .rotate{animation: rotation 1s infinite linear;position: fixed;top: 0;bottom: 0;left: 0;right: 0;margin: auto;height: 75px;width: 75px;z-index: 999;}
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(359deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text">Processing Payment</div>
+    <img class="rotate" src="https://d2ivesio5kogrp.cloudfront.net/static/watcho/images/loader-icon.png" alt="loader">
+</body>
+<script>
+
+    setTimeout(Redirect,3000);
+    function Redirect(){
+        window.location.href = "https://dishtv-testweb.revlet.net/plans/payment-status";
+    }
+</script>
+</html>

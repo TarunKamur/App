@@ -1,0 +1,460 @@
+{
+    "footerContent": {
+        "staticLink": [
+            {
+                "title": "OTT Partner",
+                "datalink": [
+                    {
+                        "title": "Zee5",
+                        "target": "/partner/zee5"
+                    },
+                    {
+                        "title": "Sonyliv",
+                        "target": "/partner/sonyliv"
+                    },
+                    {
+                        "title": "Hoichoi",
+                        "target": "/partner/hoichoi"
+                    },
+                    {
+                        "title": "Disney Hotstar",
+                        "target": "/partner/hotstar"
+                    },
+                    {
+                        "title": "lionsgate play",
+                        "target": "/partner/lionsgateplay"
+                    },
+                    {
+                        "title": "chaupal",
+                        "target": " /partner/laminar"
+                    },
+                    {
+                        "title": "Hungama",
+                        "target": "/partner/hungama"
+                    },
+                    {
+                        "title": "Epicon",
+                        "target": "/partner/epicon"
+                    },
+                    {
+                            "title": "Klikk",
+                            "target": "/partner/klikk" 
+                    }, 
+                    {
+                        "title": "Oho Gujarati",
+                        "target": "/partner/ohogujarati"
+                    },
+                    {
+                        "title": "Manorama Max",
+                        "target": "/partner/manoramamax"
+                    },
+                    {
+                        "title": "Fancode",
+                        "target": "/partner/fancode"
+                    },   {
+                        "title": "Shorts TV",
+                        "target": "/partner/shortstv"
+                    }
+                ]
+            },
+            {
+                "title": "Top Genres",
+                "datalink": [
+                    {
+                        "title": "Devotional Shows",
+                        "target": "/section/shows-devotional"
+                    },
+                    {
+                        "title": "Reality TV shows",
+                        "target": "/section/tv-shows"
+                    },
+                    {
+                        "title": "Crime Shows",
+                        "target": "/section/best-in-crime-shows"
+                    },
+                    {
+                        "title": "TV Serials ",
+                        "target": "/section/tv-serials-section"
+                    },
+                    {
+                        "title": "Hindi Shows",
+                        "target": "/tvshow/by/HIN"
+                    },
+                    {
+                        "title": "English Shows",
+                        "target": "/tvshow/by/ENG"
+                    },
+                    {
+                        "title": "Bengali Shows",
+                        "target": "/tvshow/by/BEN"
+                    },
+                    {
+                        "title": "Marathi Shows",
+                        "target": "/tvshow/by/MAR"
+                    },
+                    {
+                            "title": "Punjabi Shows",
+                            "target": "/tvshow/by/PUN" 
+                    }, 
+                    {
+                        "title": "Bhojpuri Shows",
+                        "target": "/tvshow/by/BHO"
+                    },
+                    {
+                        "title": "Romantic Shows",
+                        "target": "/shows/by/romance"
+                    },
+                    {
+                        "title": "Hindi Movies",
+                        "target": "/language/HIN"
+                    },
+                    {
+                        "title": "English Movies",
+                        "target": "/language/ENG"
+                    },
+                    {
+                        "title": "Bengali Movies",
+                        "target": "/language/BEN"
+                    },
+                    {
+                        "title": "Marathi Movies",
+                        "target": "/language/MAR"
+                    },
+                    {
+                        "title": "Punjabi Movies",
+                        "target": "/language/PUN"
+                    },
+                    {
+                        "title": "Bhojpuri Movies",
+                        "target": "/language/BHO"
+                    },
+                    {
+                        "title": "Romantic Movies",
+                        "target": "/movies/by/romance"
+                    },
+                    {
+                        "title": "Action Movies",
+                        "target": "/movies/by/action"
+                    },
+                    {
+                        "title": "Horror Movies",
+                        "target": "/movies/by/horror"
+                    },
+                    {
+                        "title": "Comedy Movies",
+                        "target": "/movies/by/comedy"
+                    },
+                    {
+                            "title": "Kids Shows",
+                            "target": "/kids" 
+                    }, 
+                    {
+                        "title": "Sports",
+                        "target": "/section/live-sports"
+                    }
+                ]
+            },
+            {
+                "title": "Web Series",
+                "datalink": [
+                    {
+                        "title": "the night manager",
+                        "target": "/tvshow/the-night-manager"
+                    },
+                    {
+                        "title": "taaza khabar",
+                        "target": "/tvshow/taaza-khabar"
+                    },
+                    {
+                        "title": "gandi baat",
+                        "target": "/tvshow/play/ep-gandi-baat-68613534"
+                    },
+                    {
+                        "title": "srikanta",
+                        "target": "/tvshow/srikanta-hindi"
+                    },
+                    {
+                        "title": "andekhi",
+                        "target": "/tvshow/undekhi"
+                    },
+                    {
+                        "title": "pop kaun",
+                        "target": "/tvshow/pop-kaun"
+                    },
+                    {
+                        "title": "i am not a robot",
+                        "target": "/tvshow/i-m-not-a-robot"
+                    },
+                    {
+                        "title": "moon knight episodes",
+                        "target": "/tvshow/moon-knight"
+                    },
+                    {
+                        "title": "Saas, Bahu Aur Flamingo",
+                        "target": "/tvshow/saas-bahu-aur-flamingo"
+                    },
+                    {
+                        "title": "Garmi",
+                        "target": "/tvshow/garmi"
+                    },
+                    {
+                        "title": "Taj Divided by Blood",
+                        "target": "/tvshow/taj-divided-by-blood"
+                    },
+                    {
+                        "title": "Kafas",
+                        "target": "/tvshow/kafas"
+                    },
+                    {
+                        "title": "Married Woman Diaries",
+                        "target": "/tvshow/married-woman-diaries"
+                    }
+                ]
+            },         
+            {
+                "title": "Live TV Shows",
+                "datalink": [
+                    {
+                        "title": "The Kapil Sharma Show",
+                        "target": "/tvshow/the-kapil-sharma-show"
+                    },
+                    {
+                        "title": "Anupama",
+                        "target": "/tvshow/anupama"
+                    },
+                    {
+                        "title": "Shark Tank India",
+                        "target": "/tvshow/shark-tank-india"
+                    },
+                    {
+                        "title": "Koffee with Karan",
+                        "target": "/tvshow/koffee-with-karan"
+                    },
+                    {
+                        "title": "Masterchef India",
+                        "target": "/tvshow/masterchef-india"
+                    },
+                    {
+                        "title": "Moving in with Malaika",
+                        "target": "/tvshow/moving-in-with-malaika"
+                    },
+                    {
+                        "title": "Kundali Bhagya",
+                        "target": "/tvshow/kundali-bhagya"
+                    },
+                    {
+                        "title": "the legend of hanuman",
+                        "target": "/tvshow/the-legend-of-hanuman"
+                    },
+                    {
+                        "title": "Savdhaan India",
+                        "target": "/tvshow/savdhaan-india-special-crime-series"
+                    },
+                    {
+                        "title": "Lavangi Mirchi",
+                        "target": "/tvshow/lavangi-mirchi"
+                    },
+                    {
+                        "title": "Amanat",
+                        "target": "/tvshow/amanat"
+                    },
+                    {
+                        "title": "Punar Vivaah",
+                        "target": "/tvshow/punar-vivaah-zindagi-milegi-dobara"
+                    },
+                    {
+                        "title": "Ghar Ki Lakshmi Betiyann",
+                        "target": "/tvshow/ghar-ki-lakshmi-betiyann"
+                    }
+                ]
+            },
+            {
+                "title": "Best Movies",
+                "datalink": [
+                    {
+                        "title": "chhatriwali",
+                        "target": "/movie/chhatriwali"
+                    },
+                    {
+                        "title": "rustom",
+                        "target": "/movie/rustom"
+                    },
+                    {
+                        "title": "shiddat full movie",
+                        "target": "/movie/shiddat"
+                    },
+                    {
+                        "title": "middle class love",
+                        "target": "/movie/middle-class-love"
+                    },
+                    {
+                        "title": "lekh",
+                        "target": "/movie/lekh-c1bd1615-7c45-4407-8849-3b9d104dcb04"
+                    },
+                    {
+                        "title": "india lockdown movie",
+                        "target": "/movie/india-lockdown"
+                    },
+                    {
+                        "title": "kanjoos makhichoos",
+                        "target": "/movie/kanjoos-makhichoos"
+                    },
+                    {
+                        "title": "shooter movie",
+                        "target": "/movie/play/shooter-44db9b9f-93ae-496d-9f1d-a74bbbcfb91d"
+                    },
+                    {
+                        "title": "blurr movie",
+                        "target": "/movie/blurr"
+                    },
+                    {
+                        "title": "silence can you hear it",
+                        "target": "/movie/silence-can-you-hear-it"
+                    },
+                    {
+                        "title": "purusha pretham",
+                        "target": "/movie/purusha-pretham-malayalam"
+                    },
+                    {
+                        "title": "run baby run 2023",
+                        "target": "/movie/run-baby-run-2"
+                    },
+                    {
+                        "title": "Kisi Ka Bhai Kisi Ki Jaan",
+                        "target": "/movie/kisi-ka-bhai-kisi-ki-jaan"
+                    },
+                    {
+                        "title": "Tarla",
+                        "target": "/movie/tarla"
+                    }
+                ]
+            },
+            {
+                "title": "Live TV Channels",
+                "datalink": [
+                    {
+                        "title": "DD-National",
+                        "target": "/channel/live/dd-national"
+                    },
+                    {
+                        "title": "republic tv live",
+                        "target": "/channel/live/republic-bharat"
+                    },
+                    {
+                        "title": "zee news live",
+                        "target": "/channel/live/zee-news"
+                    },
+                    {
+                        "title": "zee bangla",
+                        "target": "/channel/live/zee-bangla-hd"
+                    },
+                    {
+                        "title": "timesnow live",
+                        "target": "/channel/live/times-now"
+                    },
+                    {
+                        "title": "zee telugu",
+                        "target": "/channel/live/zee-telugu"
+                    },
+                    {
+                        "title": "zee cinema",
+                        "target": "/channel/live/zee-cinema"
+                    },
+                    {
+                        "title": "zee kannada",
+                        "target": "/channel/live/zee-kannada"
+                    },
+                    {
+                        "title": "zee marathi",
+                        "target": "/channel/live/zee-marathi"
+                    },
+                    {
+                        "title": "Sangeet Bhojpuri",
+                        "target": "/channel/live/sangeet-bhojpuri"
+                    },
+                    {
+                        "title": "India TV",
+                        "target": "/channel/live/india-tv"
+                    },
+                    {
+                        "title": "9X Tashan",
+                        "target": "/channel/live/9x-tashan"
+                    },
+                    {
+                        "title": "9X  Jalwa",
+                        "target": "/channel/live/9x-jalwa"
+                    }
+                ]
+            }, 
+            {
+                "title": "Watcho Exclusive",
+                "datalink": [
+                    {
+                        "title": "GillHarry",
+                        "target": "/tvshow/gillharry"
+                    },
+                    {
+                        "title": "Joint Account",
+                        "target": "/tvshow/joint-account"
+                    },
+                    {
+                        "title": "Manghadant",
+                        "target": "/tvshow/manghadant"
+                    },
+                    {
+                        "title": "Explosive",
+                        "target": "/tvshow/explosive"
+                    },
+                    {
+                        "title": "Avaidh",
+                        "target": "/tvshow/avaidh"
+                    },
+                    {
+                        "title": "Aarop",
+                        "target": "/tvshow/aarop"
+                    },
+                    {
+                        "title": "Lips Don’t Lie",
+                        "target": "/tvshow/lips-don-t-lie"
+                    },
+                    {
+                        "title": "Wajah",
+                        "target": "/tvshow/wajah"
+                    },
+                    {
+                        "title": "Jaunpur",
+                        "target": "/tvshow/jaunpur"
+                    },
+                    {
+                        "title": "Bauchaar-E-Ishq",
+                        "target": "/tvshow/bauchaar-e-ishq"
+                    },
+                    {
+                        "title": "Cheaters",
+                        "target": "/tvshow/cheaters"
+                    },
+                    {
+                        "title": "Mystery Dad",
+                        "target": "/tvshow/mystery-dad"
+                    },
+                    {
+                        "title": "Naughty Wedding",
+                        "target": "/tvshow/naughty-wedding"
+                    },
+                    {
+                        "title": "Masala Family",
+                        "target": "/tvshow/masala-family"
+                    },
+                    {
+                        "title": "Virgin At 27",
+                        "target": "/tvshow/virgin-at-27"
+                    }
+                ]
+            }       
+        ],
+        "footerBottom": {
+            "showMore": "Show More",
+            "showLess": "Show Less"
+        }
+    }
+}
